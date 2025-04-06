@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "be26dfd2-1049-4bf7-a0d6-1bf987e4a9a5",
+		"name": "UserManagementSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38204823"
+	},
+	"item": [
+		{
+			"name": "UserService",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "getUserDetails",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aW5heWFrIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzQzOTQ3NTYyLCJleHAiOjE3NDM5ODM1NjJ9.sZcfn_-cKaWB-xXwg9xumWXdqm_gB6wDTosSO0YyBJkJeGrxOogqCq3HK3WTWD26Dupgj8OqkbexoQxedbVJlA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9002/users/getUserDetails",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"users",
+										"getUserDetails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateUserDetails",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5vaiIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzQzOTM0NDEwLCJleHAiOjE3NDM5NzA0MTB9.0x5boshKnzXIaQyWtFmz9GvLAQ5UZaLKOiWeNIazvaw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"username\": \"manu\",\r\n        \"email\": \"manu123@gmail.com\",\r\n        \"password\": \"Password@321\",\r\n        \"role\": \"USER\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/users/UpdateUserDetails",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"users",
+										"UpdateUserDetails"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "UpdateUserById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYXZlZW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDM5MzQ4MjksImV4cCI6MTc0Mzk3MDgyOX0.bWL35XpQcPAJujsltzhsNdAVstrPOve9wdDrmfQ789E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"username\": \"vinayak\",\r\n        \"email\": \"vinayak@example.com\",\r\n        \"password\": \"vini12!\",\r\n        \"role\": \"ADMIN\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9002/users/updateUser/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"users",
+										"updateUser",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteUserById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYXZlZW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDM5MzQ4MjksImV4cCI6MTc0Mzk3MDgyOX0.bWL35XpQcPAJujsltzhsNdAVstrPOve9wdDrmfQ789E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9002/users/deleteUser/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"users",
+										"deleteUser",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYXZlZW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDM5MzQ4MjksImV4cCI6MTc0Mzk3MDgyOX0.bWL35XpQcPAJujsltzhsNdAVstrPOve9wdDrmfQ789E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9002/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "RegisterUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"naveen\",\r\n  \"email\": \"naveen@gmail.com\",\r\n  \"password\": \"nav@321\",\r\n  \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"naveen\",\r\n  \"password\": \"nav@321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9002/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JournalService",
+			"item": [
+				{
+					"name": "get events",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
